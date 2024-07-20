@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+    <a href="{% url 'index' %}">Back to Store</a>
+</body>
+</html>

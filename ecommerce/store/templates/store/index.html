@@ -5,5 +5,13 @@
 </head>
 <body>
     <h1>Welcome to the Store</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+    <a href="{% url 'product_list' %}">View Products</a>
 </body>
 </html>
+
+
